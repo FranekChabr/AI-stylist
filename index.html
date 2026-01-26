@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Stylist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 32px;
+            width: 100%;
+            max-width: 640px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 4px;
+        }
+
+        .header p {
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+
+        .input-group {
+            margin-bottom: 24px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+
+        .input-group textarea {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            resize: vertical;
+            min-height: 100px;
+            transition: all 0.2s ease;
+            background: #fafafa;
+        }
+
+        .input-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+
+        .input-group textarea::placeholder {
+            color: #9ca3af;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px 20px;
+            background: #111;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn:hover:not(:disabled) {
+            background: #333;
+        }
+
+        .btn:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        .btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .response-section {
+            margin-top: 24px;
+            display: none;
+        }
+
+        .response-section.visible {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .response-section h3 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+
+
+        .response-box {
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px;
+            color: #333;
+            line-height: 1.6;
+            font-size: 0.9rem;
+            overflow-wrap: break-word;
+        }
+
+        .error-box {
+            background: #fff5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: #c00;
+            font-size: 0.9rem;
+        }
+
+
+
+
+
+        /* Weather card styling */
+        .weather-card {
+            background: #f0f0f0;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 12px;
+        }
+
+        .weather-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+
+
+        .weather-city {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #111;
+        }
+
+        .weather-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .weather-item {
+            background: #fff;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #444;
+        }
+
+        .suggestion-text {
+            margin-top: 12px;
+            padding: 12px;
+            background: #fffbe6;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            color: #555;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .stats-box {
+            background: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            color: #2e7d32;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .advice-box {
+            background: #fff3e0;
+            border: 1px solid #ffe0b2;
+            color: #e65100;
+            padding: 16px;
+            border-radius: 8px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="header">
+            <h1>AI Stylist</h1>
+            <p>Twój osobisty asystent modowy</p>
+        </div>
+
+        <div class="input-group">
+            <label for="query">Wpisz swoje pytanie</label>
+            <textarea id="query" placeholder="Jadę do Warszawy, co ubrać?" rows="3"></textarea>
+        </div>
+
+        <button class="btn" id="askBtn" onclick="askStylist()">
+            <span id="btnText">Zapytaj Stylistę</span>
+        </button>
+
+        <div class="response-section" id="responseSection">
+            <h3>Porada stylisty</h3>
+            <div id="responseBox"></div>
+        </div>
+
+
+    </div>
+
+    <script>
+        // Funkcja formatowania odpowiedzi
+        function formatResponse(text) {
+            try {
+                // Próba parsowania JSON (nowy format)
+                let data;
+                if (typeof text === 'string') {
+                    // Jeśli text jest stringiem JSON
+                    if (text.trim().startsWith('{')) {
+                        data = JSON.parse(text);
+                    }
+                } else {
+                    data = text;
+                }
+
+                if (data && data.type === 'weather_advice') {
+                    const w = data.weather;
+                    return `
+                        <div class="stats-box">
+                            <strong>${w.city}</strong> → ${w.temperature}, ${w.rain_status}, wiatr ${w.wind_speed}
+                        </div>
+                        <div class="advice-box">
+                            ${data.advice}
+                        </div>
+                    `;
+                }
+            } catch (e) {
+                console.error("JSON parse error:", e);
+            }
+
+            // Fallback do starego parsowania (dla wstecznej kompatybilności lub innych błędów)
+            const jsonMatch = text.match(/\{[^{}]*"city"[^{}]*\}/);
+
+            if (jsonMatch) {
+                try {
+                    const weatherData = JSON.parse(jsonMatch[0]);
+
+                    // Utwórz ładny format pogody
+                    let weatherInfo = `<div class="weather-card">
+                        <div class="weather-header">
+                            <span class="weather-city">${weatherData.city}</span>
+                        </div>
+                        <div class="weather-details">
+                            <div class="weather-item"><strong>${weatherData.temperature_c}°C</strong></div>
+                            <div class="weather-item">Wiatr: ${weatherData.wind_speed_kmh} km/h</div>
+                            ${weatherData.is_raining ? '<div class="weather-item">Pada deszcz</div>' : ''}
+                            ${weatherData.is_snowing ? '<div class="weather-item">Pada śnieg</div>' : ''}
+                        </div>
+                    </div>`;
+
+                    // Wyciągnij sugestię (tekst po JSON)
+                    let suggestion = text.replace(jsonMatch[0], '').replace(/\[Offline Mode\]/gi, '').trim();
+
+                    // Wyczyść zbędne frazy i wyciągnij tylko sugestię
+                    suggestion = suggestion
+                        .replace(/Dla miasta\s+\S+\s+pogoda to:\s*\.?\s*/gi, '')
+                        .replace(/^[^a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]*/, '')
+                        .trim();
+
+                    // Wyciągnij tekst po "Sugeruję:" jeśli istnieje
+                    const suggestMatch = suggestion.match(/Sugeruję:\s*(.+)/i);
+                    if (suggestMatch) {
+                        suggestion = suggestMatch[1].trim();
+                        // Zamień pierwszą literę na wielką
+                        suggestion = suggestion.charAt(0).toUpperCase() + suggestion.slice(1);
+                    }
+
+                    if (suggestion) {
+                        return weatherInfo + `<div class="suggestion-text">${suggestion}</div>`;
+                    }
+                    return weatherInfo;
+
+                } catch (e) {
+                    // Jeśli parsowanie nie zadziała, zwróć oczyszczony tekst
+                }
+            }
+
+            // Podstawowe formatowanie tekstu (bez JSON)
+            let cleaned = text
+                .replace(/\[offline\]/gi, '')
+                .replace(/\[Offline Mode\]/gi, '')
+                .replace(/Pogoda się obraziła.*?:/gi, '')
+                .replace(/```/g, '')
+                .trim();
+
+            // Wyciągnij sugestię jeśli jest
+            const suggestMatch = cleaned.match(/Sugeruję:\s*(.+)/i);
+            if (suggestMatch) {
+                cleaned = suggestMatch[1].trim();
+                cleaned = cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+            }
+
+            return cleaned || 'Brak odpowiedzi.';
+        }
+
+
+
+        async function askStylist() {
+            const queryInput = document.getElementById('query');
+            const askBtn = document.getElementById('askBtn');
+            const btnText = document.getElementById('btnText');
+            const responseSection = document.getElementById('responseSection');
+            const responseBox = document.getElementById('responseBox');
+
+            const query = queryInput.value.trim();
+
+            if (!query) {
+                showError('Proszę wpisać pytanie przed wysłaniem.');
+                return;
+            }
+
+            // Set loading state
+            askBtn.disabled = true;
+            btnText.innerHTML = '<div class="spinner"></div> Myślę...';
+
+            try {
+                const response = await fetch('http://127.0.0.1:8000/ask', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ query: query })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Błąd serwera: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                // Show formatted response
+                responseBox.className = 'response-box';
+                responseBox.innerHTML = formatResponse(data.response || 'Brak odpowiedzi od stylisty.');
+                responseSection.classList.add('visible');
+
+            } catch (error) {
+                showError(getErrorMessage(error));
+            } finally {
+                // Reset button state
+                askBtn.disabled = false;
+                btnText.innerHTML = 'Zapytaj Stylistę';
+            }
+        }
+
+        function showError(message) {
+            const responseSection = document.getElementById('responseSection');
+            const responseBox = document.getElementById('responseBox');
+
+            responseBox.className = 'error-box';
+            responseBox.textContent = message;
+            responseSection.classList.add('visible');
+        }
+
+        function getErrorMessage(error) {
+            if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
+                return 'Nie można połączyć się z serwerem. Upewnij się, że API działa na http://127.0.0.1:8000';
+            }
+            return error.message || 'Wystąpił nieoczekiwany błąd. Spróbuj ponownie później.';
+        }
+
+        // Allow Enter key (Ctrl+Enter) to submit
+        document.getElementById('query').addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' && e.ctrlKey) {
+                askStylist();
+            }
+        });
+    </script>
+</body>
+
+</html>
