@@ -1,6 +1,6 @@
 # src/core/rag_engine.py
 import os
-import glob
+import pickle
 from typing import List, Dict
 import numpy as np
 from sentence_transformers import SentenceTransformer
@@ -22,38 +22,21 @@ class RagEngine:
         self._load_knowledge_base()
 
     def _load_knowledge_base(self):
-        """Ładuje pliki tekstowe z folderu data/knowledge_base."""
-        txt_files = glob.glob(os.path.join(Config.DATA_DIR, "knowledge_base", "*.txt"))
-        
-        doc_id_counter = 0
-        all_sentences = []
-        
-        for file_path in txt_files:
-            filename = os.path.basename(file_path)
-            # UTF-8 encoding dla polskich znaków
-            with open(file_path, 'r', encoding='utf-8') as f:
-                lines = [line.strip() for line in f.readlines() if line.strip()]
-                
-                for line in lines:
-                    self.documents.append({
-                        "id": doc_id_counter,
-                        "content": line,
-                        "source": filename
-                    })
-                    all_sentences.append(line)
-                    doc_id_counter += 1
-        
-        if not all_sentences:
-            logger.warning("Knowledge base is empty!")
-            return
+        """Ładuje indeks FAISS i metadane z folderu data/vector_store."""
+        index_path = os.path.join(Config.VECTOR_STORE_PATH, "index.faiss")
+        meta_path = os.path.join(Config.VECTOR_STORE_PATH, "index.pkl")
 
-        logger.info(f"Indexing {len(all_sentences)} text chunks...")
-        embeddings = self.model.encode(all_sentences)
-        
-        # Konwersja do float32 (wymagane przez FAISS)
-        embeddings = np.array(embeddings).astype('float32')
-        self.index.add(embeddings)
-        logger.info("RAG Index created successfully.")
+        if not os.path.exists(index_path) or not os.path.exists(meta_path):
+             logger.warning(f"RAG Index not found at {Config.VECTOR_STORE_PATH}. Initializing empty index.")
+             return
+
+        try:
+            self.index = faiss.read_index(index_path)
+            with open(meta_path, "rb") as f:
+                self.documents = pickle.load(f)
+            logger.info(f"Loaded RAG index with {self.index.ntotal} vectors.")
+        except Exception as e:
+             logger.error(f"Failed to load RAG index: {e}")
 
     def search(self, query: str, k: int = 3) -> List[Dict]:
         """

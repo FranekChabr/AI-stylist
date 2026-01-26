@@ -1,0 +1,818 @@
+2026-01-18 13:31:36,552 - INFO - Registered tool: get_current_weather
+2026-01-18 13:31:36,552 - INFO - Registered tool: get_user_style_profile
+2026-01-18 13:31:36,552 - INFO - Executing tool: get_current_weather with args: {'city': 'Warsaw'}
+2026-01-18 13:31:37,054 - INFO - Tool get_current_weather success.
+2026-01-18 13:31:37,054 - INFO - Executing tool: get_user_style_profile with args: {'user_id': '../etc/passwd'}
+2026-01-18 13:31:37,054 - CRITICAL - SECURITY ALERT in get_user_style_profile: Security Violation: Path traversal attempt detected for input: ../etc/passwd
+2026-01-18 13:36:00,219 - INFO - Loading embedding model...
+2026-01-18 13:36:08,753 - INFO - Indexing 2 text chunks...
+2026-01-18 13:36:10,463 - INFO - RAG Index created successfully.
+2026-01-18 13:44:30,574 - INFO - Starting up API...
+2026-01-18 13:44:30,574 - INFO - Loading embedding model...
+2026-01-18 13:44:33,328 - INFO - Indexing 2 text chunks...
+2026-01-18 13:44:34,194 - INFO - RAG Index created successfully.
+2026-01-18 13:44:34,194 - INFO - LLM Engine initialized.
+2026-01-18 13:45:27,480 - INFO - Processing query: Jadę do Warszawy, co mam ubrać?
+2026-01-18 13:45:28,875 - ERROR - Error processing request: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-01-18 13:49:29,746 - INFO - Starting up API...
+2026-01-18 13:49:29,747 - INFO - Loading embedding model...
+2026-01-18 13:49:32,598 - INFO - Indexing 2 text chunks...
+2026-01-18 13:49:33,185 - INFO - RAG Index created successfully.
+2026-01-18 13:49:33,185 - INFO - LLM Engine initialized.
+2026-01-18 13:50:13,227 - INFO - Processing query: Jadę do Warszawy, co mam ubrać?
+2026-01-18 13:50:13,841 - ERROR - Error processing request: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-01-18 13:51:35,106 - INFO - Starting up API...
+2026-01-18 13:51:35,106 - INFO - Loading embedding model...
+2026-01-18 13:51:37,915 - INFO - Indexing 2 text chunks...
+2026-01-18 13:51:38,236 - INFO - RAG Index created successfully.
+2026-01-18 13:51:38,237 - INFO - LLM Engine initialized.
+2026-01-18 13:57:35,141 - INFO - Starting up API...
+2026-01-18 13:57:35,141 - INFO - Loading embedding model...
+2026-01-18 13:57:37,963 - INFO - Indexing 2 text chunks...
+2026-01-18 13:57:38,570 - INFO - RAG Index created successfully.
+2026-01-18 13:57:38,571 - INFO - LLM Engine initialized.
+2026-01-18 13:58:08,749 - INFO - Processing query: Jadę do Warszawy, co mam ubrać?
+2026-01-18 13:58:09,661 - ERROR - Error processing request: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 50.344330734s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 50
+}
+]
+2026-01-18 14:00:19,591 - INFO - Starting up API...
+2026-01-18 14:00:19,591 - INFO - Loading embedding model...
+2026-01-18 14:00:22,366 - INFO - Indexing 2 text chunks...
+2026-01-18 14:00:23,027 - INFO - RAG Index created successfully.
+2026-01-18 14:00:23,027 - INFO - LLM Engine initialized.
+2026-01-18 14:00:54,386 - INFO - Processing query: Jade do Zakopanego, co mam ubrać?
+2026-01-18 14:00:55,165 - ERROR - Error processing request: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash-exp
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-exp
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-exp
+Please retry in 4.823305975s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-exp"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-exp"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-exp"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 4
+}
+]
+2026-01-18 14:04:47,107 - INFO - Starting up API...
+2026-01-18 14:04:47,107 - INFO - Loading embedding model...
+2026-01-18 14:04:49,858 - INFO - Indexing 2 text chunks...
+2026-01-18 14:04:50,132 - INFO - RAG Index created successfully.
+2026-01-18 14:04:50,132 - INFO - LLM Engine initialized.
+2026-01-18 14:05:17,130 - INFO - Processing query: Jade do Zakopanego, co mam ubrać?
+2026-01-18 14:10:36,093 - INFO - Starting up API...
+2026-01-18 14:10:36,094 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash-lite)
+2026-01-18 14:10:36,094 - INFO - Loading embedding model...
+2026-01-18 14:10:38,955 - INFO - Indexing 2 text chunks...
+2026-01-18 14:10:39,485 - INFO - RAG Index created successfully.
+2026-01-18 14:10:39,485 - INFO - LLM Engine initialized.
+2026-01-18 14:12:26,796 - INFO - Starting up API...
+2026-01-18 14:12:26,796 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash-lite)
+2026-01-18 14:12:26,796 - INFO - Loading embedding model...
+2026-01-18 14:12:29,633 - INFO - Indexing 2 text chunks...
+2026-01-18 14:12:29,924 - INFO - RAG Index created successfully.
+2026-01-18 14:12:29,924 - INFO - LLM Engine initialized.
+2026-01-18 14:12:37,991 - INFO - Starting up API...
+2026-01-18 14:12:37,991 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash-lite)
+2026-01-18 14:12:37,991 - INFO - Loading embedding model...
+2026-01-18 14:12:40,637 - INFO - Indexing 2 text chunks...
+2026-01-18 14:12:40,717 - INFO - RAG Index created successfully.
+2026-01-18 14:12:40,717 - INFO - LLM Engine initialized.
+2026-01-18 14:13:09,115 - INFO - Processing query: Jade jutro do Wrocławia, co mam ubrać?
+2026-01-18 14:32:26,618 - INFO - Starting up API...
+2026-01-18 14:32:26,618 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash-lite)
+2026-01-18 14:32:26,619 - INFO - Loading embedding model...
+2026-01-18 14:32:29,432 - INFO - Indexing 2 text chunks...
+2026-01-18 14:32:29,822 - INFO - RAG Index created successfully.
+2026-01-18 14:32:29,822 - INFO - LLM Engine initialized.
+2026-01-18 14:36:00,014 - INFO - Starting up API...
+2026-01-18 14:36:00,015 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash-lite)
+2026-01-18 14:36:00,015 - INFO - Loading embedding model...
+2026-01-18 14:36:02,897 - INFO - Indexing 2 text chunks...
+2026-01-18 14:36:03,297 - INFO - RAG Index created successfully.
+2026-01-18 14:36:03,297 - INFO - LLM Engine initialized.
+2026-01-18 14:36:07,859 - INFO - Starting up API...
+2026-01-18 14:36:07,859 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash-lite)
+2026-01-18 14:36:07,859 - INFO - Loading embedding model...
+2026-01-18 14:36:10,466 - INFO - Indexing 2 text chunks...
+2026-01-18 14:36:10,541 - INFO - RAG Index created successfully.
+2026-01-18 14:36:10,541 - INFO - LLM Engine initialized.
+2026-01-18 14:36:49,373 - INFO - Starting up API...
+2026-01-18 14:36:49,373 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash-lite)
+2026-01-18 14:36:49,373 - INFO - Loading embedding model...
+2026-01-18 14:36:52,186 - INFO - Indexing 2 text chunks...
+2026-01-18 14:36:52,689 - INFO - RAG Index created successfully.
+2026-01-18 14:36:52,689 - INFO - LLM Engine initialized.
+2026-01-18 14:36:56,787 - INFO - Starting up API...
+2026-01-18 14:36:56,787 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash-lite)
+2026-01-18 14:36:56,788 - INFO - Loading embedding model...
+2026-01-18 14:36:59,430 - INFO - Indexing 2 text chunks...
+2026-01-18 14:36:59,520 - INFO - RAG Index created successfully.
+2026-01-18 14:36:59,520 - INFO - LLM Engine initialized.
+2026-01-18 14:37:04,114 - INFO - Starting up API...
+2026-01-18 14:37:04,114 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash-lite)
+2026-01-18 14:37:04,114 - INFO - Loading embedding model...
+2026-01-18 14:37:06,768 - INFO - Indexing 2 text chunks...
+2026-01-18 14:37:06,838 - INFO - RAG Index created successfully.
+2026-01-18 14:37:06,839 - INFO - LLM Engine initialized.
+2026-01-18 14:37:14,099 - INFO - Starting up API...
+2026-01-18 14:37:14,099 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash-lite)
+2026-01-18 14:37:14,099 - INFO - Loading embedding model...
+2026-01-18 14:37:16,672 - INFO - Indexing 2 text chunks...
+2026-01-18 14:37:16,755 - INFO - RAG Index created successfully.
+2026-01-18 14:37:16,755 - INFO - LLM Engine initialized.
+2026-01-18 14:37:41,846 - INFO - Processing query: Jade do Warszawy, co mam ubrać?
+2026-01-18 14:41:56,951 - INFO - Starting up API...
+2026-01-18 14:41:56,951 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash-lite)
+2026-01-18 14:41:56,952 - INFO - Loading embedding model...
+2026-01-18 14:42:00,721 - INFO - Indexing 2 text chunks...
+2026-01-18 14:42:01,008 - INFO - RAG Index created successfully.
+2026-01-18 14:42:01,008 - INFO - LLM Engine initialized.
+2026-01-18 14:42:09,880 - INFO - Starting up API...
+2026-01-18 14:42:09,880 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash-lite)
+2026-01-18 14:42:09,880 - INFO - Loading embedding model...
+2026-01-18 14:42:12,434 - INFO - Indexing 2 text chunks...
+2026-01-18 14:42:12,527 - INFO - RAG Index created successfully.
+2026-01-18 14:42:12,527 - INFO - LLM Engine initialized.
+2026-01-18 14:43:17,395 - INFO - Processing query: Jade do Warszawy, w co sie ubrać?
+2026-01-18 14:47:52,508 - INFO - Starting up API...
+2026-01-18 14:47:52,508 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash-lite)
+2026-01-18 14:47:52,508 - INFO - Loading embedding model...
+2026-01-18 14:47:55,285 - INFO - Indexing 2 text chunks...
+2026-01-18 14:47:55,616 - INFO - RAG Index created successfully.
+2026-01-18 14:47:55,616 - INFO - LLM Engine initialized.
+2026-01-18 14:48:28,596 - INFO - Processing query: Jade do Warszawy, co mam ubrać?
+2026-01-18 14:50:28,334 - INFO - Starting up API...
+2026-01-18 14:50:28,334 - INFO - Using Google Gemini Engine (Model: gemini-2.0-flash)
+2026-01-18 14:50:28,334 - INFO - Loading embedding model...
+2026-01-18 14:50:31,128 - INFO - Indexing 2 text chunks...
+2026-01-18 14:50:31,450 - INFO - RAG Index created successfully.
+2026-01-18 14:50:31,450 - INFO - LLM Engine initialized.
+2026-01-18 14:50:51,287 - INFO - Processing query: Jade do Warszawy, co mam ubrać?
+2026-01-18 14:50:51,988 - ERROR - Gemini Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 8.026037202s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 8
+}
+]
+2026-01-18 14:52:07,700 - INFO - Starting up API...
+2026-01-18 14:52:07,701 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash)
+2026-01-18 14:52:07,701 - INFO - Loading embedding model...
+2026-01-18 14:52:10,556 - INFO - Indexing 2 text chunks...
+2026-01-18 14:52:10,741 - INFO - RAG Index created successfully.
+2026-01-18 14:52:10,741 - INFO - LLM Engine initialized.
+2026-01-18 14:52:27,945 - INFO - Processing query: Jade do Warszawy, co mam ubrać?
+2026-01-18 14:52:29,259 - ERROR - Gemini Error: finish_reason: 12
+index: 0
+
+2026-01-18 14:53:43,942 - INFO - Processing query: Jade do Warszawy, co mam ubrać?
+2026-01-18 14:53:45,342 - ERROR - Gemini Error: finish_reason: 12
+index: 0
+
+2026-01-18 15:01:23,343 - INFO - Starting up API...
+2026-01-18 15:01:23,343 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash)
+2026-01-18 15:01:23,413 - INFO - Loading embedding model...
+2026-01-18 15:01:26,178 - INFO - Indexing 2 text chunks...
+2026-01-18 15:01:28,256 - INFO - RAG Index created successfully.
+2026-01-18 15:01:28,258 - INFO - LLM Engine initialized.
+2026-01-18 15:01:44,610 - INFO - Processing query: Jade do Warszawy, co mam ubrać?
+2026-01-18 15:01:47,138 - ERROR - Error processing request: 'NoneType' object has no attribute 'parts'
+2026-01-18 15:03:39,296 - INFO - Starting up API...
+2026-01-18 15:03:39,296 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash)
+2026-01-18 15:03:39,341 - INFO - Loading embedding model...
+2026-01-18 15:03:41,957 - INFO - Indexing 2 text chunks...
+2026-01-18 15:03:42,652 - INFO - RAG Index created successfully.
+2026-01-18 15:03:42,658 - INFO - LLM Engine initialized.
+2026-01-18 15:04:12,285 - ERROR - Error processing request: 'LLMEngine' object has no attribute 'process_query'
+2026-01-18 15:05:10,112 - INFO - Starting up API...
+2026-01-18 15:05:10,112 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash)
+2026-01-18 15:05:10,150 - INFO - Loading embedding model...
+2026-01-18 15:05:12,930 - INFO - Indexing 2 text chunks...
+2026-01-18 15:05:13,442 - INFO - RAG Index created successfully.
+2026-01-18 15:05:13,443 - INFO - LLMEngine (GenAI v2) initialized successfully.
+2026-01-18 15:05:13,443 - INFO - LLM Engine initialized.
+2026-01-18 15:05:16,705 - INFO - Starting up API...
+2026-01-18 15:05:16,705 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash)
+2026-01-18 15:05:16,740 - INFO - Loading embedding model...
+2026-01-18 15:05:19,251 - INFO - Indexing 2 text chunks...
+2026-01-18 15:05:19,378 - INFO - RAG Index created successfully.
+2026-01-18 15:05:19,379 - INFO - LLMEngine (GenAI v2) initialized successfully.
+2026-01-18 15:05:19,379 - INFO - LLM Engine initialized.
+2026-01-18 15:05:29,752 - INFO - Starting up API...
+2026-01-18 15:05:29,753 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash)
+2026-01-18 15:05:29,789 - INFO - Loading embedding model...
+2026-01-18 15:05:32,324 - INFO - Indexing 2 text chunks...
+2026-01-18 15:05:32,573 - INFO - RAG Index created successfully.
+2026-01-18 15:05:32,579 - INFO - LLMEngine (GenAI v2) initialized successfully.
+2026-01-18 15:05:32,579 - INFO - LLM Engine initialized.
+2026-01-18 15:05:57,729 - INFO - Processing query: Jade do Wrocławia, co mam ubrać?
+2026-01-18 15:07:47,905 - INFO - Starting up API...
+2026-01-18 15:07:47,905 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash)
+2026-01-18 15:07:47,943 - INFO - Loading embedding model...
+2026-01-18 15:07:50,698 - INFO - Indexing 2 text chunks...
+2026-01-18 15:07:51,357 - INFO - RAG Index created successfully.
+2026-01-18 15:07:51,360 - INFO - LLM Engine initialized.
+2026-01-18 15:07:57,108 - INFO - Starting up API...
+2026-01-18 15:07:57,108 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash)
+2026-01-18 15:07:57,143 - INFO - Loading embedding model...
+2026-01-18 15:07:59,665 - INFO - Indexing 2 text chunks...
+2026-01-18 15:07:59,816 - INFO - RAG Index created successfully.
+2026-01-18 15:07:59,816 - INFO - LLM Engine initialized.
+2026-01-18 15:08:16,932 - INFO - Processing query: Jadę do Wrocławia, co mam ubrać?
+2026-01-18 15:09:49,403 - INFO - Starting up API...
+2026-01-18 15:09:49,403 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash)
+2026-01-18 15:09:49,443 - INFO - Loading embedding model...
+2026-01-18 15:09:51,997 - INFO - Indexing 2 text chunks...
+2026-01-18 15:09:52,354 - INFO - RAG Index created successfully.
+2026-01-18 15:09:52,355 - INFO - LLM Engine initialized.
+2026-01-18 15:10:00,488 - INFO - Starting up API...
+2026-01-18 15:10:00,488 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash)
+2026-01-18 15:10:00,523 - INFO - Loading embedding model...
+2026-01-18 15:10:03,532 - INFO - Indexing 2 text chunks...
+2026-01-18 15:10:03,717 - INFO - RAG Index created successfully.
+2026-01-18 15:10:03,717 - INFO - LLM Engine initialized.
+2026-01-18 15:10:40,090 - INFO - Processing query: Jadę do Wrocławia, co mam ubrać?
+2026-01-18 15:10:41,974 - ERROR - MODEL ZABLOKOWAŁ ODPOWIEDŹ. Powód: FinishReason.UNEXPECTED_TOOL_CALL
+2026-01-18 15:12:53,555 - INFO - Registered tool: get_current_weather
+2026-01-18 15:12:53,556 - INFO - Registered tool: get_user_style_profile
+2026-01-18 15:12:53,556 - INFO - Executing tool: get_current_weather with args: {'city': 'Warsaw'}
+2026-01-18 15:12:53,964 - INFO - Tool get_current_weather success.
+2026-01-18 15:12:53,964 - INFO - Executing tool: get_user_style_profile with args: {'user_id': '../etc/passwd'}
+2026-01-18 15:12:53,964 - CRITICAL - SECURITY ALERT in get_user_style_profile: Security Violation: Path traversal attempt detected for input: ../etc/passwd
+2026-01-18 15:15:29,905 - INFO - Starting up API...
+2026-01-18 15:15:29,905 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash)
+2026-01-18 15:15:29,949 - INFO - Loading embedding model...
+2026-01-18 15:15:32,496 - INFO - Indexing 2 text chunks...
+2026-01-18 15:15:32,882 - INFO - RAG Index created successfully.
+2026-01-18 15:15:32,883 - INFO - LLM Engine initialized.
+2026-01-18 15:15:50,280 - INFO - Processing query: Jade do Warszawy, co mam ubrać?
+2026-01-18 15:15:51,836 - ERROR - MODEL ZABLOKOWAŁ ODPOWIEDŹ. Powód: FinishReason.UNEXPECTED_TOOL_CALL
+2026-01-18 15:20:19,445 - INFO - Starting up API...
+2026-01-18 15:20:19,445 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash)
+2026-01-18 15:20:19,490 - INFO - Loading embedding model...
+2026-01-18 15:20:22,075 - INFO - Indexing 2 text chunks...
+2026-01-18 15:20:22,432 - INFO - RAG Index created successfully.
+2026-01-18 15:20:22,434 - INFO - LLM Engine initialized.
+2026-01-18 15:20:27,970 - INFO - Starting up API...
+2026-01-18 15:20:27,970 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash)
+2026-01-18 15:20:28,010 - INFO - Loading embedding model...
+2026-01-18 15:20:30,505 - INFO - Indexing 2 text chunks...
+2026-01-18 15:20:30,613 - INFO - RAG Index created successfully.
+2026-01-18 15:20:30,613 - INFO - LLM Engine initialized.
+2026-01-18 15:20:44,521 - INFO - Processing query: Jadę do Wrocławia, co mam ubrać?
+2026-01-18 15:24:29,840 - INFO - Starting up API...
+2026-01-18 15:24:29,840 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash)
+2026-01-18 15:24:29,885 - INFO - Loading embedding model...
+2026-01-18 15:24:32,593 - INFO - Indexing 2 text chunks...
+2026-01-18 15:24:32,896 - INFO - RAG Index created successfully.
+2026-01-18 15:24:32,898 - INFO - LLM Engine initialized.
+2026-01-18 15:24:37,522 - INFO - Starting up API...
+2026-01-18 15:24:37,522 - INFO - Using Google Gemini Engine (Model: gemini-2.5-flash)
+2026-01-18 15:24:37,558 - INFO - Loading embedding model...
+2026-01-18 15:24:40,173 - INFO - Indexing 2 text chunks...
+2026-01-18 15:24:40,577 - INFO - RAG Index created successfully.
+2026-01-18 15:24:40,577 - INFO - LLM Engine initialized.
+2026-01-18 15:25:00,328 - INFO - Processing query: Jade jutro do Wrocławia, co ubrać?
+2026-01-18 15:33:44,581 - INFO - Starting up API...
+2026-01-18 15:33:44,582 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-18 15:33:44,582 - INFO - Initializing Local Stub LLM (Offline Mode)
+2026-01-18 15:33:44,582 - INFO - Loading embedding model...
+2026-01-18 15:33:47,200 - INFO - Indexing 2 text chunks...
+2026-01-18 15:33:47,556 - INFO - RAG Index created successfully.
+2026-01-18 15:33:47,556 - INFO - LLM Engine initialized.
+2026-01-18 15:34:14,491 - INFO - [STUB] Processing: Jade do Wrocławia, co mam ubrać?
+2026-01-18 15:34:15,164 - INFO - [STUB] Intent detected: Weather for Wroclaw
+2026-01-18 15:34:15,164 - INFO - Executing tool: get_current_weather with args: {'city': 'Wroclaw'}
+2026-01-18 15:34:15,164 - WARNING - Tool not found: get_current_weather
+2026-01-18 15:36:09,469 - INFO - Registered tool: get_current_weather
+2026-01-18 15:36:09,469 - INFO - Registered tool: get_user_style_profile
+2026-01-18 15:36:13,040 - INFO - Starting up API...
+2026-01-18 15:36:13,040 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-18 15:36:13,040 - INFO - Initializing Local Stub LLM (Offline Mode)
+2026-01-18 15:36:13,040 - INFO - Loading embedding model...
+2026-01-18 15:36:16,664 - INFO - Indexing 2 text chunks...
+2026-01-18 15:36:17,430 - INFO - RAG Index created successfully.
+2026-01-18 15:36:17,431 - INFO - LLM Engine initialized.
+2026-01-18 15:36:36,776 - INFO - [STUB] Processing: Jade do Wrocławia, co ubrać?
+2026-01-18 15:36:38,443 - INFO - [STUB] Intent detected: Weather for Wroclaw
+2026-01-18 15:36:38,443 - INFO - Executing tool: get_current_weather with args: {'city': 'Wroclaw'}
+2026-01-18 15:36:38,867 - INFO - Tool get_current_weather success.
+2026-01-18 16:33:52,454 - INFO - [STUB] Processing: Hej, jutro jade do Warszawy, co ubrać?
+2026-01-18 16:33:53,985 - INFO - [STUB] Intent detected: Weather for Warszawa
+2026-01-18 16:33:53,987 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-18 16:33:54,401 - INFO - Tool get_current_weather success.
+2026-01-19 18:13:35,432 - INFO - Registered tool: get_current_weather
+2026-01-19 18:13:35,433 - INFO - Registered tool: get_user_style_profile
+2026-01-19 18:13:51,929 - INFO - Starting up API...
+2026-01-19 18:13:51,929 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-19 18:13:51,929 - INFO - Initializing Local Stub LLM (Offline Mode)
+2026-01-19 18:13:51,929 - INFO - Loading embedding model...
+2026-01-19 18:13:55,062 - INFO - Indexing 2 text chunks...
+2026-01-19 18:13:56,294 - INFO - RAG Index created successfully.
+2026-01-19 18:13:56,298 - INFO - LLM Engine initialized.
+2026-01-26 19:02:48,613 - INFO - Registered tool: get_current_weather
+2026-01-26 19:02:48,614 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:02:56,052 - INFO - Starting up API...
+2026-01-26 19:02:56,052 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 19:02:56,052 - INFO - Initializing Local Stub LLM (Offline Mode)
+2026-01-26 19:02:56,052 - INFO - Loading embedding model...
+2026-01-26 19:02:58,588 - INFO - Indexing 2 text chunks...
+2026-01-26 19:02:59,329 - INFO - RAG Index created successfully.
+2026-01-26 19:02:59,329 - INFO - LLM Engine initialized.
+2026-01-26 19:03:47,485 - INFO - [STUB] Processing: jade na ukraine jutro, jak sie ubrac?
+2026-01-26 19:04:16,953 - INFO - [STUB] Processing: jade do Wrocławia jutro, jak sie ubrac?
+2026-01-26 19:06:33,859 - INFO - Registered tool: get_current_weather
+2026-01-26 19:06:33,860 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:06:37,423 - INFO - Starting up API...
+2026-01-26 19:06:37,423 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 19:06:37,423 - INFO - Initializing Local Stub LLM (Offline Mode)
+2026-01-26 19:06:37,423 - INFO - Loading embedding model...
+2026-01-26 19:06:40,081 - INFO - Indexing 2 text chunks...
+2026-01-26 19:06:40,439 - INFO - RAG Index created successfully.
+2026-01-26 19:06:40,439 - INFO - LLM Engine initialized.
+2026-01-26 19:07:13,870 - INFO - [STUB] Processing: Jade jutro do Krakowa, co mam ubrac?
+2026-01-26 19:07:14,529 - INFO - [STUB] Intent detected: Weather for Krakow
+2026-01-26 19:07:14,529 - INFO - Executing tool: get_current_weather with args: {'city': 'Krakow'}
+2026-01-26 19:07:15,061 - INFO - Tool get_current_weather success.
+2026-01-26 19:14:59,710 - INFO - Registered tool: get_current_weather
+2026-01-26 19:14:59,711 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:15:03,376 - INFO - Starting up API...
+2026-01-26 19:15:03,376 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 19:15:03,376 - INFO - Initializing Local Stub LLM (Offline Mode)
+2026-01-26 19:15:03,376 - INFO - Loading embedding model...
+2026-01-26 19:15:06,189 - INFO - Indexing 2 text chunks...
+2026-01-26 19:15:06,625 - INFO - RAG Index created successfully.
+2026-01-26 19:15:06,625 - INFO - LLM Engine initialized.
+2026-01-26 19:15:44,192 - INFO - Registered tool: get_current_weather
+2026-01-26 19:15:44,192 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:15:47,774 - INFO - Starting up API...
+2026-01-26 19:15:47,775 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 19:15:47,775 - INFO - Initializing Local Stub LLM (Offline Mode)
+2026-01-26 19:15:47,775 - INFO - Loading embedding model...
+2026-01-26 19:15:50,592 - INFO - Indexing 2 text chunks...
+2026-01-26 19:15:50,999 - INFO - RAG Index created successfully.
+2026-01-26 19:15:50,999 - INFO - LLM Engine initialized.
+2026-01-26 19:16:04,474 - INFO - [STUB] Processing: Jade jutro do warszawy, co ubrać?
+2026-01-26 19:16:05,159 - INFO - [STUB] Intent detected: Weather for Warszawa
+2026-01-26 19:16:05,159 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:16:05,652 - INFO - Tool get_current_weather success.
+2026-01-26 19:17:44,103 - INFO - [STUB] Processing: Jade jutro do warszawy, co ubrać?
+2026-01-26 19:17:44,426 - INFO - [STUB] Intent detected: Weather for Warszawa
+2026-01-26 19:17:44,427 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:17:44,862 - INFO - Tool get_current_weather success.
+2026-01-26 19:18:56,071 - INFO - [STUB] Processing: Jade jutro do warszawy, co ubrać?
+2026-01-26 19:18:56,372 - INFO - [STUB] Intent detected: Weather for Warszawa
+2026-01-26 19:18:56,375 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:18:56,808 - INFO - Tool get_current_weather success.
+2026-01-26 19:20:28,306 - INFO - [STUB] Processing: Jade jutro do warszawy, co ubrać?
+2026-01-26 19:20:28,657 - INFO - [STUB] Intent detected: Weather for Warszawa
+2026-01-26 19:20:28,657 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:20:29,038 - INFO - Tool get_current_weather success.
+2026-01-26 19:21:42,824 - INFO - [STUB] Processing: Jade jutro do warszawy, co ubrać?
+2026-01-26 19:21:43,084 - INFO - [STUB] Intent detected: Weather for Warszawa
+2026-01-26 19:21:43,085 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:21:43,479 - INFO - Tool get_current_weather success.
+2026-01-26 19:22:49,024 - INFO - [STUB] Processing: Jade jutro do warszawy, co ubrać?
+2026-01-26 19:22:49,312 - INFO - [STUB] Intent detected: Weather for Warszawa
+2026-01-26 19:22:49,312 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:22:49,745 - INFO - Tool get_current_weather success.
+2026-01-26 19:32:56,005 - INFO - Registered tool: get_current_weather
+2026-01-26 19:32:56,006 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:33:09,494 - INFO - Registered tool: get_current_weather
+2026-01-26 19:33:09,494 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:34:12,881 - INFO - Registered tool: get_current_weather
+2026-01-26 19:34:12,881 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:34:16,628 - INFO - Starting up API...
+2026-01-26 19:34:16,628 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 19:34:16,628 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 19:34:16,628 - INFO - Loading embedding model...
+2026-01-26 19:34:19,578 - INFO - Indexing 2 text chunks...
+2026-01-26 19:34:20,198 - INFO - RAG Index created successfully.
+2026-01-26 19:34:20,199 - INFO - LLM Engine initialized.
+2026-01-26 19:34:20,218 - INFO - [STUB] Przetwarzam: Jade do warszawy
+2026-01-26 19:34:21,759 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:34:22,230 - INFO - Tool get_current_weather success.
+2026-01-26 19:34:32,717 - INFO - [STUB] Przetwarzam: Jade do warszawy
+2026-01-26 19:34:32,911 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:34:33,299 - INFO - Tool get_current_weather success.
+2026-01-26 19:36:07,127 - INFO - Registered tool: get_current_weather
+2026-01-26 19:36:07,132 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:36:11,594 - INFO - Starting up API...
+2026-01-26 19:36:11,594 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 19:36:11,594 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 19:36:11,594 - INFO - Loading embedding model...
+2026-01-26 19:36:14,535 - INFO - Indexing 2 text chunks...
+2026-01-26 19:36:15,306 - INFO - RAG Index created successfully.
+2026-01-26 19:36:15,306 - INFO - LLM Engine initialized.
+2026-01-26 19:36:33,862 - INFO - [STUB] Przetwarzam: Jade do warszawy
+2026-01-26 19:36:35,317 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:36:35,781 - INFO - Tool get_current_weather success.
+2026-01-26 19:37:57,809 - INFO - Registered tool: get_current_weather
+2026-01-26 19:37:57,810 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:38:01,568 - INFO - Starting up API...
+2026-01-26 19:38:01,568 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 19:38:01,568 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 19:38:01,568 - INFO - Loading embedding model...
+2026-01-26 19:38:06,219 - INFO - Indexing 2 text chunks...
+2026-01-26 19:38:06,628 - INFO - RAG Index created successfully.
+2026-01-26 19:38:06,629 - INFO - LLM Engine initialized.
+2026-01-26 19:38:11,735 - INFO - [STUB] Przetwarzam: Jade do warszawy
+2026-01-26 19:38:12,008 - INFO - Executing tool: get_current_weather with args: {'city': 'Warsaw'}
+2026-01-26 19:38:12,418 - INFO - Tool get_current_weather success.
+2026-01-26 19:38:12,418 - INFO - Weather response type: <class 'str'>, value: {"city": "Warsaw", "temperature_c": 1.2, "is_raining": false, "is_snowing": false, "wind_speed_kmh": 7.9}
+2026-01-26 19:38:26,211 - INFO - [STUB] Przetwarzam: Jade do warszawy
+2026-01-26 19:38:26,504 - INFO - Executing tool: get_current_weather with args: {'city': 'Warsaw'}
+2026-01-26 19:38:26,921 - INFO - Tool get_current_weather success.
+2026-01-26 19:38:26,922 - INFO - Weather response type: <class 'str'>, value: {"city": "Warsaw", "temperature_c": 1.2, "is_raining": false, "is_snowing": false, "wind_speed_kmh": 7.9}
+2026-01-26 19:38:43,291 - INFO - Registered tool: get_current_weather
+2026-01-26 19:38:43,291 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:39:37,513 - INFO - Registered tool: get_current_weather
+2026-01-26 19:39:37,514 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:39:41,195 - INFO - Starting up API...
+2026-01-26 19:39:41,195 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 19:39:41,195 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 19:39:41,195 - INFO - Loading embedding model...
+2026-01-26 19:39:44,097 - INFO - Indexing 2 text chunks...
+2026-01-26 19:39:45,032 - INFO - RAG Index created successfully.
+2026-01-26 19:39:45,032 - INFO - LLM Engine initialized.
+2026-01-26 19:39:45,055 - INFO - [STUB] Przetwarzam: Jade do warszawy
+2026-01-26 19:39:45,664 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:39:46,208 - INFO - Tool get_current_weather success.
+2026-01-26 19:39:49,630 - INFO - [STUB] Przetwarzam: Jade do warszawy, co ubrac?
+2026-01-26 19:39:50,565 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:39:50,968 - INFO - Tool get_current_weather success.
+2026-01-26 19:41:06,489 - INFO - [STUB] Przetwarzam: Jade do warszawy, co ubrac?
+2026-01-26 19:41:06,864 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:41:07,346 - INFO - Tool get_current_weather success.
+2026-01-26 19:42:38,220 - INFO - [STUB] Przetwarzam: Jade do warszawy co ubrac?
+2026-01-26 19:42:39,449 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:42:39,954 - INFO - Tool get_current_weather success.
+2026-01-26 19:46:02,600 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 19:46:02,601 - INFO - Loading embedding model...
+2026-01-26 19:46:06,079 - INFO - Indexing 2 text chunks...
+2026-01-26 19:46:08,331 - INFO - RAG Index created successfully.
+2026-01-26 19:46:08,331 - INFO - [STUB] Przetwarzam: pogoda w Warszawie
+2026-01-26 19:46:09,723 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:46:09,724 - WARNING - Tool not found: get_current_weather
+2026-01-26 19:46:16,280 - INFO - Registered tool: get_current_weather
+2026-01-26 19:46:16,280 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:46:20,090 - INFO - Starting up API...
+2026-01-26 19:46:20,090 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 19:46:20,090 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 19:46:20,090 - INFO - Loading embedding model...
+2026-01-26 19:46:24,652 - INFO - Indexing 2 text chunks...
+2026-01-26 19:46:24,882 - INFO - RAG Index created successfully.
+2026-01-26 19:46:24,882 - INFO - LLM Engine initialized.
+2026-01-26 19:46:38,202 - INFO - Registered tool: get_current_weather
+2026-01-26 19:46:38,203 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:46:41,700 - INFO - Starting up API...
+2026-01-26 19:46:41,700 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 19:46:41,700 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 19:46:41,700 - INFO - Loading embedding model...
+2026-01-26 19:46:45,011 - INFO - Indexing 2 text chunks...
+2026-01-26 19:46:45,125 - INFO - RAG Index created successfully.
+2026-01-26 19:46:45,125 - INFO - LLM Engine initialized.
+2026-01-26 19:46:45,336 - INFO - Registered tool: get_current_weather
+2026-01-26 19:46:45,336 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:46:48,149 - INFO - Starting up API...
+2026-01-26 19:46:48,150 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 19:46:48,150 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 19:46:48,150 - INFO - Loading embedding model...
+2026-01-26 19:46:51,266 - INFO - Indexing 2 text chunks...
+2026-01-26 19:46:51,371 - INFO - RAG Index created successfully.
+2026-01-26 19:46:51,371 - INFO - LLM Engine initialized.
+2026-01-26 19:46:59,468 - INFO - Registered tool: get_current_weather
+2026-01-26 19:46:59,468 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:46:59,468 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 19:46:59,468 - INFO - Loading embedding model...
+2026-01-26 19:47:03,539 - INFO - Indexing 2 text chunks...
+2026-01-26 19:47:04,679 - INFO - RAG Index created successfully.
+2026-01-26 19:47:04,680 - INFO - [STUB] Przetwarzam: pogoda w Warszawie
+2026-01-26 19:47:04,821 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:47:05,294 - INFO - Tool get_current_weather success.
+2026-01-26 19:47:39,098 - INFO - [STUB] Przetwarzam: Jade do warszawy, co ubrac?
+2026-01-26 19:47:39,406 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:47:39,803 - INFO - Tool get_current_weather success.
+2026-01-26 19:48:51,836 - INFO - Registered tool: get_current_weather
+2026-01-26 19:48:51,836 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:48:55,331 - INFO - Starting up API...
+2026-01-26 19:48:55,331 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 19:48:55,331 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 19:48:55,331 - INFO - Loading embedding model...
+2026-01-26 19:48:58,302 - INFO - Indexing 2 text chunks...
+2026-01-26 19:48:58,415 - INFO - RAG Index created successfully.
+2026-01-26 19:48:58,415 - INFO - LLM Engine initialized.
+2026-01-26 19:49:16,421 - INFO - Registered tool: get_current_weather
+2026-01-26 19:49:16,422 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:49:16,422 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 19:49:16,422 - INFO - Loading embedding model...
+2026-01-26 19:49:19,230 - INFO - Indexing 2 text chunks...
+2026-01-26 19:49:19,848 - INFO - RAG Index created successfully.
+2026-01-26 19:49:19,849 - INFO - [STUB] Przetwarzam: pogoda w Warszawa
+2026-01-26 19:49:20,496 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:49:20,956 - INFO - Tool get_current_weather success.
+2026-01-26 19:49:20,956 - INFO - [STUB] Przetwarzam: pogoda w Kraków
+2026-01-26 19:49:21,407 - INFO - Executing tool: get_current_weather with args: {'city': 'Kraków'}
+2026-01-26 19:49:21,409 - ERROR - Tool get_current_weather validation failed: Validation Error: 1 validation error for WeatherArgs
+city
+  Value error, City name contains invalid characters. [type=value_error, input_value='Kraków', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error
+2026-01-26 19:49:32,554 - INFO - Registered tool: get_current_weather
+2026-01-26 19:49:32,554 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:49:36,008 - INFO - Starting up API...
+2026-01-26 19:49:36,008 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 19:49:36,008 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 19:49:36,008 - INFO - Loading embedding model...
+2026-01-26 19:49:38,935 - INFO - Registered tool: get_current_weather
+2026-01-26 19:49:38,936 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:49:38,936 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 19:49:38,936 - INFO - Loading embedding model...
+2026-01-26 19:49:39,625 - INFO - Indexing 2 text chunks...
+2026-01-26 19:49:39,780 - INFO - RAG Index created successfully.
+2026-01-26 19:49:39,781 - INFO - LLM Engine initialized.
+2026-01-26 19:49:41,608 - INFO - Indexing 2 text chunks...
+2026-01-26 19:49:41,749 - INFO - RAG Index created successfully.
+2026-01-26 19:49:41,749 - INFO - [STUB] Przetwarzam: pogoda w Warszawa
+2026-01-26 19:49:42,042 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:49:42,422 - INFO - Tool get_current_weather success.
+2026-01-26 19:49:42,422 - INFO - [STUB] Przetwarzam: pogoda w Kraków
+2026-01-26 19:49:42,458 - INFO - Executing tool: get_current_weather with args: {'city': 'Kraków'}
+2026-01-26 19:49:42,890 - INFO - Tool get_current_weather success.
+2026-01-26 19:50:11,720 - INFO - [STUB] Przetwarzam: Jade do Krakowa, co ubrać?
+2026-01-26 19:50:12,025 - INFO - Executing tool: get_current_weather with args: {'city': 'Kraków'}
+2026-01-26 19:50:12,529 - INFO - Tool get_current_weather success.
+2026-01-26 19:52:21,828 - INFO - Registered tool: get_current_weather
+2026-01-26 19:52:21,829 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:52:25,602 - INFO - Starting up API...
+2026-01-26 19:52:25,602 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 19:52:25,602 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 19:52:25,602 - INFO - Loading embedding model...
+2026-01-26 19:52:28,212 - INFO - Indexing 2 text chunks...
+2026-01-26 19:52:28,643 - INFO - RAG Index created successfully.
+2026-01-26 19:52:28,643 - INFO - LLM Engine initialized.
+2026-01-26 19:52:57,932 - INFO - [STUB] Przetwarzam: Jade do Krakowa, co ubrać?
+2026-01-26 19:52:58,741 - INFO - Executing tool: get_current_weather with args: {'city': 'Kraków'}
+2026-01-26 19:52:59,245 - INFO - Tool get_current_weather success.
+2026-01-26 19:57:37,021 - INFO - [STUB] Przetwarzam: Jade do warszawy, co ubrać?
+2026-01-26 19:57:37,488 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 19:57:37,965 - INFO - Tool get_current_weather success.
+2026-01-26 19:59:07,145 - INFO - Registered tool: get_current_weather
+2026-01-26 19:59:07,145 - INFO - Registered tool: get_user_style_profile
+2026-01-26 19:59:10,740 - INFO - Starting up API...
+2026-01-26 19:59:10,741 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 19:59:10,741 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 19:59:10,741 - INFO - Loading embedding model...
+2026-01-26 19:59:13,628 - INFO - Indexing 5 text chunks...
+2026-01-26 19:59:15,620 - INFO - RAG Index created successfully.
+2026-01-26 19:59:15,621 - INFO - LLM Engine initialized.
+2026-01-26 20:00:15,865 - INFO - Registered tool: get_current_weather
+2026-01-26 20:00:15,866 - INFO - Registered tool: get_user_style_profile
+2026-01-26 20:00:15,866 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 20:00:15,866 - INFO - Loading embedding model...
+2026-01-26 20:00:18,897 - INFO - Indexing 5 text chunks...
+2026-01-26 20:00:20,385 - INFO - RAG Index created successfully.
+2026-01-26 20:00:20,386 - INFO - [STUB] Przetwarzam: pogoda w Warszawa
+2026-01-26 20:00:20,445 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 20:00:20,861 - INFO - Tool get_current_weather success.
+2026-01-26 20:00:20,861 - INFO - [STUB] Przetwarzam: pogoda w Kraków
+2026-01-26 20:00:20,920 - INFO - Executing tool: get_current_weather with args: {'city': 'Kraków'}
+2026-01-26 20:00:21,294 - INFO - Tool get_current_weather success.
+2026-01-26 20:00:43,467 - INFO - [STUB] Przetwarzam: Jade do warszawy, co ubrać?
+2026-01-26 20:00:43,820 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 20:00:44,201 - INFO - Tool get_current_weather success.
+2026-01-26 20:01:04,215 - INFO - [STUB] Przetwarzam: Jade do krakowa, co ubrać?
+2026-01-26 20:01:04,451 - INFO - Executing tool: get_current_weather with args: {'city': 'Kraków'}
+2026-01-26 20:01:04,865 - INFO - Tool get_current_weather success.
+2026-01-26 20:11:16,451 - INFO - Registered tool: get_current_weather
+2026-01-26 20:11:16,452 - INFO - Registered tool: get_user_style_profile
+2026-01-26 20:11:39,827 - INFO - Starting up API...
+2026-01-26 20:11:39,827 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 20:11:39,828 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 20:11:39,828 - INFO - Loading embedding model...
+2026-01-26 20:11:42,765 - INFO - Indexing 5 text chunks...
+2026-01-26 20:11:44,024 - INFO - RAG Index created successfully.
+2026-01-26 20:11:44,024 - INFO - LLM Engine initialized.
+2026-01-26 20:14:52,942 - INFO - [STUB] Przetwarzam: Jade do warszawy, co ubrac?
+2026-01-26 20:14:53,894 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 20:14:54,372 - INFO - Tool get_current_weather success.
+2026-01-26 20:37:34,020 - INFO - Registered tool: get_current_weather
+2026-01-26 20:37:34,021 - INFO - Registered tool: get_user_style_profile
+2026-01-26 20:37:42,143 - INFO - Starting up API...
+2026-01-26 20:37:42,143 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 20:37:42,143 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 20:37:42,143 - INFO - Loading embedding model...
+2026-01-26 20:37:45,171 - INFO - Loaded RAG index with 9 vectors.
+2026-01-26 20:37:45,174 - INFO - LLM Engine initialized.
+2026-01-26 20:37:51,321 - INFO - Loading embedding model...
+2026-01-26 20:37:54,252 - INFO - Loaded RAG index with 9 vectors.
+2026-01-26 20:42:24,729 - INFO - Registered tool: get_current_weather
+2026-01-26 20:42:24,730 - INFO - Registered tool: get_user_style_profile
+2026-01-26 20:42:29,524 - INFO - Starting up API...
+2026-01-26 20:42:29,524 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 20:42:29,524 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 20:42:29,524 - INFO - Loading embedding model...
+2026-01-26 20:42:32,472 - INFO - Loaded RAG index with 9 vectors.
+2026-01-26 20:42:32,473 - INFO - LLM Engine initialized.
+2026-01-26 20:46:05,333 - INFO - Registered tool: get_current_weather
+2026-01-26 20:46:05,333 - INFO - Registered tool: get_user_style_profile
+2026-01-26 20:46:09,755 - INFO - Starting up API...
+2026-01-26 20:46:09,755 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 20:46:09,755 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 20:46:09,755 - INFO - Loading embedding model...
+2026-01-26 20:46:12,595 - INFO - Loaded RAG index with 9 vectors.
+2026-01-26 20:46:12,595 - INFO - LLM Engine initialized.
+2026-01-26 20:47:04,585 - INFO - Registered tool: get_current_weather
+2026-01-26 20:47:04,586 - INFO - Registered tool: get_user_style_profile
+2026-01-26 20:47:04,638 - INFO - Loading embedding model...
+2026-01-26 20:47:07,618 - INFO - Loaded RAG index with 9 vectors.
+2026-01-26 20:47:07,621 - INFO - Processing query: Jest bardzo gorąco, ponad 30 stopni, co ubrać?
+2026-01-26 20:47:09,941 - INFO - Processing query: Idę na elegancką kolację, czy mogę ubrać poliester?
+2026-01-26 20:52:04,605 - INFO - Registered tool: get_current_weather
+2026-01-26 20:52:04,606 - INFO - Registered tool: get_user_style_profile
+2026-01-26 20:52:04,645 - INFO - Loading embedding model...
+2026-01-26 20:52:07,431 - INFO - Loaded RAG index with 9 vectors.
+2026-01-26 20:52:07,435 - INFO - Processing query: Jest bardzo gorąco, ponad 30 stopni, co ubrać?
+2026-01-26 20:52:09,168 - INFO - Processing query: Idę na elegancką kolację, czy mogę ubrać poliester?
+2026-01-26 20:55:50,520 - INFO - Registered tool: get_current_weather
+2026-01-26 20:55:50,521 - INFO - Registered tool: get_user_style_profile
+2026-01-26 20:55:55,011 - INFO - Starting up API...
+2026-01-26 20:55:55,011 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 20:55:55,011 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 20:55:55,011 - INFO - Loading embedding model...
+2026-01-26 20:55:58,090 - INFO - Loaded RAG index with 9 vectors.
+2026-01-26 20:55:58,091 - INFO - LLM Engine initialized.
+2026-01-26 20:59:22,838 - INFO - Executing tool: slow_tool with args: {'duration': 6}
+2026-01-26 20:59:27,949 - ERROR - Tool slow_tool timed out.
+2026-01-26 20:59:27,950 - INFO - Executing tool: slow_tool with args: {}
+2026-01-26 20:59:27,950 - ERROR - Tool slow_tool argument error: Argument validation error: test_registry.<locals>.slow_tool() missing 1 required positional argument: 'duration'
+2026-01-26 21:49:36,147 - INFO - Registered tool: get_current_weather
+2026-01-26 21:49:36,147 - INFO - Registered tool: get_user_style_profile
+2026-01-26 21:49:36,215 - INFO - Loading embedding model...
+2026-01-26 21:49:39,109 - INFO - Loaded RAG index with 9 vectors.
+2026-01-26 21:49:39,114 - INFO - Processing query: Jaka jest pogoda w Warszawie i co mam ubrać?
+2026-01-26 21:49:40,762 - INFO - AI requested tool: get_current_weather with args: {'city': 'Warsaw'}
+2026-01-26 21:49:40,762 - INFO - Executing tool: get_current_weather with args: {'city': 'Warsaw'}
+2026-01-26 21:49:41,174 - INFO - Tool get_current_weather success.
+2026-01-26 21:52:22,858 - INFO - Executing tool: slow_func with args: {'duration': 6}
+2026-01-26 21:52:27,866 - ERROR - Tool slow_func timed out.
+2026-01-26 21:53:47,959 - INFO - Registered tool: get_current_weather
+2026-01-26 21:53:47,959 - INFO - Registered tool: get_user_style_profile
+2026-01-26 21:53:53,112 - INFO - Starting up API...
+2026-01-26 21:53:53,112 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 21:53:53,112 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 21:53:53,112 - INFO - Loading embedding model...
+2026-01-26 21:53:56,011 - INFO - Loaded RAG index with 9 vectors.
+2026-01-26 21:53:56,012 - INFO - LLM Engine initialized.
+2026-01-26 21:54:28,444 - INFO - Registered tool: get_current_weather
+2026-01-26 21:54:28,444 - INFO - Registered tool: get_user_style_profile
+2026-01-26 21:54:33,614 - INFO - Starting up API...
+2026-01-26 21:54:33,614 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 21:54:33,614 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 21:54:33,614 - INFO - Loading embedding model...
+2026-01-26 21:54:40,014 - INFO - Registered tool: get_current_weather
+2026-01-26 21:54:40,014 - INFO - Registered tool: get_user_style_profile
+2026-01-26 21:54:44,321 - INFO - Starting up API...
+2026-01-26 21:54:44,321 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 21:54:44,321 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 21:54:44,321 - INFO - Loading embedding model...
+2026-01-26 21:54:47,081 - INFO - Loaded RAG index with 9 vectors.
+2026-01-26 21:54:47,082 - INFO - LLM Engine initialized.
+2026-01-26 21:55:17,802 - INFO - [STUB] Przetwarzam: Jaka jest pogoda w Warszawie?
+2026-01-26 21:55:18,769 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 21:55:19,177 - INFO - Tool get_current_weather success.
+2026-01-26 21:56:39,208 - INFO - Registered tool: get_current_weather
+2026-01-26 21:56:39,208 - INFO - Registered tool: get_user_style_profile
+2026-01-26 21:56:43,325 - INFO - Starting up API...
+2026-01-26 21:56:43,325 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 21:56:43,325 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 21:56:43,325 - INFO - Loading embedding model...
+2026-01-26 21:56:46,203 - INFO - Loaded RAG index with 9 vectors.
+2026-01-26 21:56:46,204 - INFO - LLM Engine initialized.
+2026-01-26 21:56:56,809 - INFO - [STUB] Przetwarzam: Jade do warszawy
+2026-01-26 21:56:58,203 - INFO - Executing tool: get_current_weather with args: {'city': 'Warszawa'}
+2026-01-26 21:56:58,631 - INFO - Tool get_current_weather success.
+2026-01-26 21:58:26,845 - INFO - [STUB] Przetwarzam: Jade do krakowa
+2026-01-26 21:58:27,741 - INFO - Executing tool: get_current_weather with args: {'city': 'Kraków'}
+2026-01-26 21:58:28,117 - INFO - Tool get_current_weather success.

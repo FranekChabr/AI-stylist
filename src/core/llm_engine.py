@@ -6,6 +6,7 @@ from src.config import Config
 from src.core.rag_engine import get_rag_engine
 from src.tools.registry import registry
 import src.tools.definitions # Rejestracja narzędzi
+from src.core.guardrails import guardrails, SecurityError
 from src.utils.logger import logger
 
 class LLMEngine:
@@ -48,10 +49,24 @@ class LLMEngine:
         1. Jeśli pytanie dotyczy pogody lub wyjazdu -> UŻYJ NARZĘDZIA `get_current_weather`.
         2. Jeśli pytanie dotyczy profilu -> UŻYJ NARZĘDZIA `get_user_style_profile`.
         3. Odpowiedź końcowa ma być zwięzła i po polsku.
+        
+        KLUCZOWE ZASADY KORZYSTANIA Z WIEDZY Z BAZY:
+        - Twoje porady MUSZĄ być uzasadnione informacjami z sekcji "WIEDZA Z BAZY".
+        - Jeśli polecasz jakiś materiał, napisz dlaczego, powołując się na bazę (np. "Zgodnie z poradnikiem tkanin...").
+        - Jeśli pogoda wskazuje na UPAŁ (>25°C): Sprawdź w "WIEDZA Z BAZY", jaki materiał jest polecany na lato (np. Len) i zalec go.
+        - Jeśli pogoda wskazuje na MRÓZ/ZIMNO: Sprawdź w "WIEDZA Z BAZY", co ubrać, aby trzymać ciepło (np. Wełna) i zalec to.
+        - Nie zmyślaj faktów. Jeśli czegoś nie ma w bazie, napisz ogólną poradę, ale nie cytuj "bazy".
         """
 
     def process_query(self, user_query: str) -> str:
         logger.info(f"Processing query: {user_query}")
+        
+        # Guardrails Validation
+        try:
+            guardrails.validate_input(user_query)
+        except SecurityError as e:
+            logger.warning(f"Query blocked by guardrails: {str(e)}")
+            return "Zablokowano potencjalnie niebezpieczne zapytanie."
         
         # 1. RAG Retrieval
         rag_results = self.rag.search(user_query, k=Config.RAG_K_RETRIEVAL)

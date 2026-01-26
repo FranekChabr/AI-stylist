@@ -15,8 +15,6 @@ htmlcov/
 dist/
 build/
 
-logs/
-*.log
 .vscode/
 .idea/
 

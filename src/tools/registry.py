@@ -1,8 +1,9 @@
 import json
 import functools
 import traceback
-from typing import Callable, Dict, List, Type, Any, Union # <--- Dodałem Union
+from typing import Callable, Dict, List, Type, Any, Union
 from pydantic import BaseModel, ValidationError
+
 from src.utils.logger import logger
 
 # Wyjątki
@@ -60,7 +61,21 @@ class ToolRegistry:
                 args_dict = arguments
 
             tool_func = self._tools[tool_name]
-            result = tool_func(**args_dict)
+            
+            # Switch to ThreadPoolExecutor for thread-safe timeouts without signals
+            from concurrent.futures import ThreadPoolExecutor, TimeoutError
+            
+            # Nie używamy 'with', bo domyślnie czeka na zakończenie wątku (shutdown wait=True)
+            executor = ThreadPoolExecutor(max_workers=1)
+            future = executor.submit(tool_func, **args_dict)
+            
+            try:
+                result = future.result(timeout=5)
+                executor.shutdown(wait=False)
+            except TimeoutError:
+                logger.error(f"Tool {tool_name} timed out.")
+                executor.shutdown(wait=False)
+                return json.dumps({"error": "Tool execution timed out"})
             
             logger.info(f"Tool {tool_name} success.")
             return json.dumps(result, ensure_ascii=False)
@@ -73,6 +88,11 @@ class ToolRegistry:
         except ValidationError as e:
             msg = f"Validation Error: {str(e)}"
             logger.error(f"Tool {tool_name} validation failed: {msg}")
+            return json.dumps({"error": msg})
+
+        except TypeError as e:
+            msg = f"Argument validation error: {str(e)}"
+            logger.error(f"Tool {tool_name} argument error: {msg}")
             return json.dumps({"error": msg})
             
         except SecurityError as e:
