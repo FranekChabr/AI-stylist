@@ -24,6 +24,7 @@ Dokumentacja (Swagger): http://127.0.0.1:8000/docs
 2. Otworz plik `index.html` w dowolnej przegladarce.
    - Mozesz tez uruchomic prosty serwer: `python3 -m http.server 3000`, a nastepnie wejsc na http://localhost:3000
 
+### Wyglad Interface
 <p align="center">
   <img src="./ss/ss2.png" width="45%" />
   <img src="./ss/ss1.png" width="45%" />
