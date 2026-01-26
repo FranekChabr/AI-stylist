@@ -149,7 +149,7 @@ class LLMEngine:
 
             # SCENARIUSZ B: Zwykły Tekst (Koniec)
             else:
-                return response.text
+                return guardrails.validate_output(response.text)
 
         return "Przekroczono limit pętli wywołań."
 
@@ -236,7 +236,7 @@ class LocalLLMStub:
                     "advice": f"Stylista radzi: {advice}"
                 }
                 
-                return json.dumps(response_data, ensure_ascii=False)
+                return guardrails.validate_output(json.dumps(response_data, ensure_ascii=False))
 
             except Exception as e:
                 return f"[offline] Pogoda się zepsuła w API: {e}"
@@ -248,7 +248,7 @@ class LocalLLMStub:
             else:
                 profile = profile_json
             
-            return f"[offline] Twój vibe to: {profile}. Jak będziesz w czymś totalnie nie w Twoim stylu, to ja nie ratuję reputacji."
+            return guardrails.validate_output(f"[offline] Twój vibe to: {profile}. Jak będziesz w czymś totalnie nie w Twoim stylu, to ja nie ratuję reputacji.")
 
         return (
             "[offline] Nie kumam. "

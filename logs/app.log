@@ -893,3 +893,15 @@ city
 2026-01-26 22:15:04,528 - INFO - [STUB] Przetwarzam: Jaki jest styl uzytkownika Jan?
 2026-01-26 22:15:04,853 - INFO - Executing tool: get_user_style_profile with args: {'user_id': 'jan'}
 2026-01-26 22:15:04,856 - INFO - Tool get_user_style_profile success.
+2026-01-26 22:38:58,665 - INFO - Registered tool: get_current_weather
+2026-01-26 22:38:58,666 - INFO - Registered tool: get_user_style_profile
+2026-01-26 22:39:05,196 - INFO - Starting up API...
+2026-01-26 22:39:05,196 - INFO - Using LOCAL STUB Engine (Offline mode)
+2026-01-26 22:39:05,196 - INFO - Odpalam Local Stub LLM (tryb offline)
+2026-01-26 22:39:05,196 - INFO - Loading embedding model...
+2026-01-26 22:39:08,203 - INFO - Loaded RAG index with 9 vectors.
+2026-01-26 22:39:08,203 - INFO - LLM Engine initialized.
+2026-01-26 22:39:16,738 - INFO - [STUB] Przetwarzam: Jade do krakowa
+2026-01-26 22:39:17,825 - INFO - Executing tool: get_current_weather with args: {'city': 'Kraków'}
+2026-01-26 22:39:18,297 - INFO - Tool get_current_weather success.
+2026-01-26 22:39:25,676 - INFO - [STUB] Przetwarzam: ty pedale

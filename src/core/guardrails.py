@@ -36,4 +36,27 @@ class Guardrails:
         # Removing null bytes as a basic safety measure
         return text.replace("\0", "")
 
+    def validate_output(self, text: str) -> str:
+        """
+        Validates the output text against known forbidden phrases.
+        Returns a security alert message if a violation is found.
+        Otherwise returns the original text.
+        """
+        if not text:
+            return ""
+            
+        lower_text = text.lower()
+        forbidden_phrases = [
+            "pwned",
+            "hacked",
+            "root access",
+            "system prompt"
+        ]
+        
+        for phrase in forbidden_phrases:
+            if phrase in lower_text:
+                return "[Security Alert] Odpowiedź modelu została zablokowana ze względów bezpieczeństwa."
+                
+        return text
+
 guardrails = Guardrails()
