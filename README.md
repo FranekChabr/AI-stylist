@@ -2,7 +2,7 @@
 
 Agent doradzajacy ubior z wykorzystaniem RAG i Function Calling (Gemini / Local Stub).
 
-## Instalacja (Wymagany Python 3.12+)
+## Instalacja py 3.12+
 1. Utworz srodowisko: `python3.12 -m venv venv`
 2. Aktywuj: `source venv/bin/activate` (macOS/Linux) lub `venv\Scripts\activate` (Win)
 3. Instalacja: `pip install -r requirements.txt`
